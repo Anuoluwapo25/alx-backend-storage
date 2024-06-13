@@ -1,0 +1,2 @@
+-- script that creates a stored procedure ComputeAverageWeightedScoreForUsers
+-- omputes and store the average weighted score for all students.

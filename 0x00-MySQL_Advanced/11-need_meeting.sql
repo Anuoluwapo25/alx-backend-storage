@@ -1,0 +1,2 @@
+--script that creates a view need_meeting that lists all students
+-- return all students name with conditions
