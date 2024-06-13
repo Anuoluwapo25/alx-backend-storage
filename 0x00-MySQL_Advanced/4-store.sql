@@ -1,3 +1,6 @@
+-- Trigger to update the quantity in items after a new order is inserted
+-- return a decreade item
+
 DELIMITER //
 
 CREATE TRIGGER decrease_quantity AFTER INSERT ON orders
@@ -6,6 +9,7 @@ BEGIN
     UPDATE items
     SET quantity = quantity - NEW.number
     WHERE name = NEW.item_name;
-END; //
+END;
+//
 
 DELIMITER ;
