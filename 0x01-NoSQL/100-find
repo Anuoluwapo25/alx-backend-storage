@@ -1,12 +1,2 @@
-// MongoDB connection details
-
-mongo_host="localhost"
-mongo_port="27017"
-database_name="$1"  # Database name passed as argument
-
-# MongoDB query to find documents where 'name' starts with 'Holberton'
-mongo_query='db.schools.find({"name": {"$regex": "^Holberton"}})'
-
-# Execute MongoDB query using mongo shell
-mongo "$mongo_host:$mongo_port/$database_name" --eval "$mongo_query"
-
+// A script that lists all documents with name starting by Holberton in the collection school
+db.school.find({name: /^Holberton/})
